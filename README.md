@@ -1,6 +1,8 @@
+```
+Name:Ragavendran A
+Reg no:212222230114
+```
 # Experiment-01-INTERFACING DIGITAL OUTPUT FOR ARM DEVELOPMENT BOARD 
- 
-
 ## Aim: To Interface a Digital output (LED) to ARM development board and write a blink code 
 ## Components required: STM32 CUBE IDE, NUCLEO ARM DEVELOPMENT BOARD  
 ## Theory 
@@ -183,6 +185,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 ## Output  :
 ![ouput](screenshot1.jpg)
 ![output](screenshot2.jpg)
+
  
  
  
