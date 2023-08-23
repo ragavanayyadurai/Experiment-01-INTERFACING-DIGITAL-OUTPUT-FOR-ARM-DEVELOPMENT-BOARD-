@@ -82,6 +82,7 @@ The main features of LPC2148 include the following.
 ```c
 #include "main.h"
 
+
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 void ledblink();
@@ -91,9 +92,7 @@ int main(void)
 
   HAL_Init();
 
-
   SystemClock_Config();
-
 
   MX_GPIO_Init();
 
@@ -101,7 +100,6 @@ int main(void)
   {
    ledblink();
   }
-
 }
 
 void ledblink()
@@ -147,36 +145,37 @@ static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
+
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
-  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
 
-  GPIO_InitStruct.Pin = LED_GREEN_Pin;
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+
+
+  GPIO_InitStruct.Pin = GPIO_PIN_5;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  HAL_GPIO_Init(LED_GREEN_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 
 
 void Error_Handler(void)
 {
-
   __disable_irq();
   while (1)
   {
   }
-
 }
 
 #ifdef  USE_FULL_ASSERT
+
 void assert_failed(uint8_t *file, uint32_t line)
 {
 
 }
 #endif
-
 ```
 
 
