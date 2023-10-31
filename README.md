@@ -1,8 +1,10 @@
 ```
-Name:Ragavendran A
+Name: Ragavendran A
 Reg no:212222230114
 ```
-# Experiment-01-INTERFACING DIGITAL OUTPUT FOR ARM DEVELOPMENT BOARD 
+# Experiment 01 INTERFACING DIGITAL OUTPUT FOR ARM DEVELOPMENT BOARD 
+ 
+
 ## Aim: To Interface a Digital output (LED) to ARM development board and write a blink code 
 ## Components required: STM32 CUBE IDE, NUCLEO ARM DEVELOPMENT BOARD  
 ## Theory 
@@ -36,7 +38,7 @@ The main features of LPC2148 include the following.
 
 ## Procedure:
  1. click on STM 32 CUBE IDE, the following screen will appear 
- ![image](https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png)
+ <img src="https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png">
 
  2. click on FILE, click on new stm 32 project 
  ![image](https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png)
@@ -107,9 +109,9 @@ int main(void)
 void ledblink()
 {
 	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET);
-	HAL_Delay(500);
+	HAL_Delay(2000);
 	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
-	HAL_Delay(500);
+	HAL_Delay(1000);
 }
 
 void SystemClock_Config(void)
@@ -180,11 +182,10 @@ void assert_failed(uint8_t *file, uint32_t line)
 #endif
 ```
 
-
-
 ## Output  :
-![ouput](screenshot1.jpg)
-![output](screenshot2.jpg)
+<img src="https://github.com/AbishekAnand15/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/118706942/a717c18e-9118-4d21-a03c-ca7bb4b0455c" height=450 width=450>
+
+<img src="https://github.com/AbishekAnand15/Experiment-01-INTERFACING-DIGITAL-OUTPUT-FOR-ARM-DEVELOPMENT-BOARD-/assets/118706942/1b6867d9-bbe8-4f78-b8f2-66f522c0914b" height=450 width=450>
 
  
  
@@ -192,5 +193,3 @@ void assert_failed(uint8_t *file, uint32_t line)
  
 ## Result :
 Interfacing a digital output with ARM microcontroller is executed and the results are verified.
-
-
